@@ -1,6 +1,6 @@
 ---
 section: Applications
-title: Deploy Contoso POS
+title: Deploy Contoso POS (Optional)
 ---
 
 In this module, you will:
