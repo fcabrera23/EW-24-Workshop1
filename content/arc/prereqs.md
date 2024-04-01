@@ -39,7 +39,7 @@ This section provides Azure CLI commands that you can run with an Azure subscrip
 
     | ℹ️ Note                                   | 
     |------------------------------------------|
-    | _Take a note of the Service Principal appId and Service Principal password. You will need it later.._ | 
+    | _Take a note of the Service Principal appId and Service Principal password. You will need it later._ | 
     | | 
 
 4. Enable all required resource providers in the Azure subscription using the az provider register command:
