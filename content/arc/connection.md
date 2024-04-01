@@ -1,5 +1,4 @@
 ---
-section_id: Arc
-nav_order: 5
+section: Arc
 title: Arc-enable cluster
 ---
