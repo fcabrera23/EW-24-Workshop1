@@ -19,24 +19,40 @@ In this unit, we will learn how to tag and push a Docker container image to Azur
     az login
     ```
 
-3. Tag Your Docker Image - Tag your Docker image with the Azure Container Registry login server and the desired image name. Replace <acr-name> with your Azure Container Registry name and <image-name> with the desired image name:
+3. Tag Your Docker Image - Tag your Docker image with the Azure Container Registry login server and the desired image name. Replace  <image-name> with your username  name:
 
     ```bash
-    docker tag my-python-app <acr-name>.azurecr.io/<image-name>:<tag>
+    docker tag my-python-app embeddedworld24.azurecr.io/<image-name>:latest
     ```
 
-4. Log in to Azure Container Registry - Use the following command to log in to your Azure Container Registry. Replace <acr-name> with your Azure Container Registry name:
+    For example:
+
     ```bash
-    az acr login --name <acr-name>
+    docker tag my-python-app embeddedworld24.azurecr.io/fcabrera:latest
+    ```
+
+4. Log in to Azure Container Registry - Use the following command to log in to your Azure Container Registry. 
+    ```bash
+    az acr login --name embeddedworld24
     ```
 
 5. Push Your Docker Image - Push your Docker image to Azure Container Registry using the following command. Replace <acr-name> with your Azure Container Registry name and <image-name> with the image name you tagged in Step 3:
 
     ```bash
-    docker push <acr-name>.azurecr.io/<image-name>:<tag>
+    docker push embeddedworld24.azurecr.io/<image-name>:<tag>
     ```
 
-6. Verify the Image in Azure Container Registry
+    For exmaple:
+
+     ```bash
+    docker push embeddedworld24.azurecr.io/fcabrera:latest
+    ```
+
+6. Verify the image in the Azure Container Registry
+
+    ```bash
+    az acr repository list --name embeddedworld24
+    ```
 
     | ℹ️ Note                                   | 
     |------------------------------------------|
