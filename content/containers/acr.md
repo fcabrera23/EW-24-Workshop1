@@ -1,6 +1,7 @@
 ---
 section: Containers
 title: Pushing to the cloud
+nav_order: 3
 ---
 
 In this unit, we will learn how to tag and push a Docker container image to Azure Container Registry (ACR). Azure Container Registry is a managed, private Docker registry service that stores and manages your container images. Tagging and pushing images to ACR allows you to deploy your containerized applications to Azure services such as Azure Kubernetes Service (AKS) or Azure App Service.
