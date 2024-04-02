@@ -22,3 +22,5 @@ title: Host Setup
 1. Copy the MSI to the folder, and pin the folder
 
 1. Modify taskbar
+
+1. Install Git - [Download](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe)
