@@ -15,25 +15,31 @@ This section provides Azure CLI commands that you can run with an Azure subscrip
 
 1. Set up the Azure subscription - Using local `az cli` or  **Azure Cloud Shell**, run the following command. Replace the value of <your-Azure-subscription-ID> with your Azure subscription ID value:
 
-    ```bash
-    subscriptionid="<your-Azure-subscription-ID>
+    ```powershell
+    $subscriptionid="<your-Azure-subscription-ID>"
     az account set --subscription $subscriptionid
     ```
 
-2. Create a new Resourge Group
+    For exmaple
+
+    ```powershell
+    $subscriptionid="db8411db-bdc3-47bc-b51e-9a687b462c43"
+    az account set --subscription $subscriptionid
+    ```
+
+2. Create a new Resourge Group for your deployment. Replace your _\<your-name>_ with your username.
 
     ```bash
-    resourcegroup="aksedge-training"
-    location="westus3"
+    $resourcegroup="aksedge-training-<your-name>"
+    $location="westus2"
     az group create --name $resourcegroup --location $location
     ```
 
-3. Create a new Service Principal with the built-in **Owner** role and restricted to the resource group scope. This service principal is used to connect to Azure Arc. Use the `az ad sp create-for-rbac` command:
+3. Create a new Service Principal with the built-in **Owner** role and restricted to the resource group scope. This service principal is used to connect to Azure Arc. Use the `az ad sp create-for-rbac` command and replace  _\<your-name>_ with your username.
 
     ```bash
-    resourcegroup="aksedge-training"
-    serviceprincipalname="aksedge-sp"
-    subscriptionid=$(az account show --query id -o tsv)
+    $serviceprincipalname="aksedge-sp-<your-name>"
+    $subscriptionid=$(az account show --query id -o tsv)
     az ad sp create-for-rbac --name $serviceprincipalname --role "Owner" --scopes /subscriptions/$subscriptionid/resourceGroups/$resourcegroup
     ```
 
@@ -41,14 +47,3 @@ This section provides Azure CLI commands that you can run with an Azure subscrip
     |------------------------------------------|
     | _Take a note of the Service Principal appId and Service Principal password. You will need it later._ | 
     | | 
-
-4. Enable all required resource providers in the Azure subscription using the az provider register command:
-
-    ```bash
-    az provider register --namespace Microsoft.HybridCompute
-    az provider register --namespace Microsoft.GuestConfiguration
-    az provider register --namespace Microsoft.HybridConnectivity
-    az provider register --namespace Microsoft.Kubernetes
-    az provider register --namespace Microsoft.KubernetesConfiguration
-    az provider register --namespace Microsoft.ExtendedLocation
-    ```

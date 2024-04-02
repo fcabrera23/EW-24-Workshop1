@@ -4,7 +4,9 @@ nav_order: 4
 title: Deploy sample vote application
 ---
 
-This section uses a sample application that is a simple voting app consisting of a front and back end, which is based on Microsoft's azure-vote-front image. The container image for this application is hosted on Azure Container Registry (ACR). See [linux-sample.yaml](https://github.com/Azure/AKS-Edge/blob/main/samples/others/linux-sample.yaml) in the GitHub repo package for the deployment manifest. Note that in the YAML we specified a nodeSelector tag as Linux.
+This section uses a sample application that is a simple voting app consisting of a front and back end, which is based on Microsoft's azure-vote-front image. The container image for this application is hosted on Azure Container Registry (ACR).
+
+See [linux-sample.yaml](https://github.com/Azure/AKS-Edge/blob/main/samples/others/linux-sample.yaml) in the GitHub repo package for the deployment manifest. Note that in the YAML we specified a nodeSelector tag as Linux.
 
 ### Instructions
 

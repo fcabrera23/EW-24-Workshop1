@@ -13,7 +13,7 @@ In this module, you will:
 1. To make sure our JSON scheme file configurations are correct and valid, from Windows Terminal, run the below PowerShell command (make sure you are still inside the _C:\BuildLab_ folder).
 
     ```powershell
-    Test-AksEdgeNetworkParameters -JsonConfigFilePath .\AKSEE-Config.json
+    Test-AksEdgeNetworkParameters -JsonConfigFilePath .\aksedge-config.json
     ```
 
     <img src="../../images/2023-04-29_07-20-12.png" alt="2023-04-29_07-20-12.png" width="100%" height="auto">
@@ -21,7 +21,7 @@ In this module, you will:
 2. To start the cluster deployment, run the below PowerShell command and observe the deployment's various steps.
 
     ```powershell
-    New-AksEdgeDeployment -JsonConfigFilePath .\AKSEE-Config.json
+    New-AksEdgeDeployment -JsonConfigFilePath .\aksedge-config.json
     ```
 
     <img src="../../images/2023-04-29_07-23-27.png" alt="2023-04-29_07-23-27.png" width="100%" height="auto">
@@ -39,7 +39,7 @@ In this module, you will:
 
     To validate the deployment, run the below _kubectl_ command.
 
-    ```cmd
+    ```powershell
     kubectl get nodes,pods,services -o wide -A
     ```
 

@@ -11,7 +11,7 @@ In this module, you will:
 
 1. In this module, you will deploy and access a sample application to better understand the targeted use cases for AKS Edge Essentials. First, create a new _contosopos_ namespace using the below _kubectl_ command.
 
-    ```cmd
+    ```powershell
     kubectl create ns contosopos 
     ```
 
@@ -24,7 +24,7 @@ In this module, you will:
 
 2. Next, deploy the application using the below _kubectl_ command.
 
-    ```cmd
+    ```powershell
     kubectl create -f https://raw.githubusercontent.com/likamrat/azure-arc-jumpstart-apps/main/contoso-supermarket/prod/yaml/contosopos.yaml
     ```
 
@@ -35,9 +35,9 @@ In this module, you will:
     | ℹ️ Note                                   | 
     |------------------------------------------|
     | _It might take a couple of minutes for all resources to be deployed._ | 
-    | |
 
-    ```cmd
+
+    ```powershell
     kubectl get pods,services -n contosopos
     ```
 
@@ -63,4 +63,9 @@ In this module, you will:
     
     <img src="../../images/2023-04-30_06-48-56.png" style="margin-top:10px" alt="2023-04-30_06-48-56.png" width="100%" height="auto">
 
-### **Congratulations, you have now deployed a sample POS application on your newly created AKS Edge Essentials cluster!**
+    **Congratulations, you have now deployed a sample POS application on your newly created AKS Edge Essentials cluster!**
+
+5. Remove application - To clean up, delete all resources using the following command:
+    ```bash
+    kubectl delete -f https://raw.githubusercontent.com/likamrat/azure-arc-jumpstart-apps/main/contoso-supermarket/prod/yaml/contosopos.yaml
+    ```

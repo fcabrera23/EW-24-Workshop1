@@ -19,7 +19,7 @@ In this module, you will:
 
     | ℹ️ Note                                   | 
     |------------------------------------------|
-    | _AKS Edge Essentials supports both K8s and K3s. For the purpose of this lab, you will be installing the K3s distribution._ | 
+    | _AKS Edge Essentials supports both K8s and K3s. For the purpose of this lab, you will be installing the K3s distribution. Also, consider that the verison of the MSI may change depending on the latest release._ | 
     | | 
 
     ![2023-04-27_12-42-50.png](../../images/2023-04-27_12-42-50.png)
@@ -47,7 +47,11 @@ In this module, you will:
 
     ![2023-04-27_13-26-11.png](../../images/2023-04-27_13-26-11.png)
 
-4. Check device settings using the ```Install-AksEdgeHostFeatures -Confirm:$false``` command to validate the Hyper-V, SSH, and Windows Power settings on the machine.
+4. Check device settings using the `Install-AksEdgeHostFeature` command to validate the Hyper-V, SSH, and Windows Power settings on the machine.
+
+    ```bash
+    Install-AksEdgeHostFeatures -Confirm:$false
+    ``` 
 
     | ℹ️ Note                                   | 
     |------------------------------------------|

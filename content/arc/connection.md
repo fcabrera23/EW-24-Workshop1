@@ -20,6 +20,12 @@ This sections describes how to connect your AKS Edge Essentials cluster to Azure
     |`ClientSecret` | string | Provide the password for the service principal. |
     | | | 
 
+    For this workshop you can use the following values
+
+    - **Location**: "westus2" 
+    - **SubscriptionId**: "db8411db-bdc3-47bc-b51e-9a687b462c43"
+    - **TenantId**: "e177ad01-19e3-4e0c-a305-c6e6cadfe204"
+
 1. Connect your cluster to Arc - Run `Connect-AksEdgeArc` to install and connect the existing cluster to Arc-enabled Kubernetes:
 
     ```powershell
