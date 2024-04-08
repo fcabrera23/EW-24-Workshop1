@@ -1,5 +1,6 @@
 ---
 section: AKS-EE
+nav_order: 3
 title: Deploy AKS-EE cluster
 ---
 

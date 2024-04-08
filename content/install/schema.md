@@ -1,5 +1,6 @@
 ---
 section: AKS-EE
+nav_order: 2
 title: Explore deployment schema
 ---
 
@@ -49,7 +50,7 @@ In this module, you will:
     | _[AKS Edge Essentials deployment configuration JSON parameters can be found here](https://learn.microsoft.com/en-us/azure/aks/hybrid/aks-edge-deployment-config-json). For the purpose of the lab, the team has provided a pre-populated JSON file for you to review._ | 
     | | 
 
-4. In VS Code, open the _AKSEE-Config.json_ file.
+4. In VS Code, open the _aksedge-config.json_ file.
 
     <img src="../../images/2023-04-29_06-53-56.png" alt="2023-04-29_06-53-56.png" width="100%" height="auto">
 

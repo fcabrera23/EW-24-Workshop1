@@ -11,9 +11,7 @@ In this module, you will:
 
 ### Host configuration
 
-1. Click on the Start menu and click on the _BuildLab_ folder.
-
-    ![winstart.png](../../images/winstart.png)
+1. Click on the **File Explorer** and navigate to the `C:\BuildLab` folder.
 
 2. Start the installation using the _AksEdge.msi_ file. You can either use the installation graphical interface or the command line. Verify the MSI installation from the "Add or remove programs" settings.
 
@@ -40,7 +38,7 @@ In this module, you will:
 
     ```
     cd C:\BuildLab
-    Set-ExecutionPolicy Bypass -Scope Process -Force
+    Set-ExecutionPolicy Unrestricted -Force
     Import-Module AksEdge
     Get-Command -Module AKSEdge | Format-Table Name, Version
     ```
@@ -50,7 +48,7 @@ In this module, you will:
 4. Check device settings using the `Install-AksEdgeHostFeature` command to validate the Hyper-V, SSH, and Windows Power settings on the machine.
 
     ```bash
-    Install-AksEdgeHostFeatures -Confirm:$false
+    Install-AksEdgeHostFeatures
     ``` 
 
     | ℹ️ Note                                   | 
