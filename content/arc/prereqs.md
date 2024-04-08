@@ -31,7 +31,7 @@ This section provides Azure CLI commands that you can run with an Azure subscrip
 
     ```bash
     $resourcegroup="aksedge-training-<your-name>"
-    $location="westus2"
+    $location="eastus2"
     az group create --name $resourcegroup --location $location
     ```
 
