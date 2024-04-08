@@ -20,10 +20,10 @@ In this unit, we will learn how to tag and push a Docker container image to Azur
     az login
     ```
 
-3. Tag Your Docker Image - Tag your Docker image with the Azure Container Registry login server and the desired image name. Replace  <image-name> with your username  name:
+3. Tag Your Docker Image - Tag your Docker image with the Azure Container Registry login server and the desired image name. Replace  **\<image-name>** with your username  name, and use **latest** as the **\<tag>**
 
     ```bash
-    docker tag my-python-app embeddedworld24.azurecr.io/<image-name>:latest
+    docker tag my-python-app embeddedworld24.azurecr.io/<image-name>:<tag>
     ```
 
     For example:
